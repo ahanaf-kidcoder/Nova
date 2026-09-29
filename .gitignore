@@ -1,4 +1,38 @@
-build/
+# C++ build files
+*.o
+*.obj
+*.exe
 *.out
-test.cpp
+*.app
+*.dll
+*.so
+*.dylib
+*.a
+*.lib
 
+# Compiled binaries
+main
+a.out
+
+# CMake build folders
+build/
+cmake-build-*/
+out/
+
+# IDE / Editor folders
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Debug files
+*.pdb
+*.ilk
+
+# Logs
+*.log
