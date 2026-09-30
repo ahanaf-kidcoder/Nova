@@ -12,7 +12,7 @@ class mrtx
 	int rows() { return matrix.size(); }
 	int cols() { return matrix[0].size(); }
 	
-	static mrtx zeros(int r, int c){
+	mrtx zeros(int r, int c){
 		 mrtx z;
 		 z.matrix=std::vector<std::vector<cd>>(r, std::vector<cd>(c, 0.0));
 		 return z;
@@ -118,36 +118,21 @@ class mrtx
 		}
 		return C;
 	}
-
-
-
-
-
-	//scaler multiplication
 	mrtx scale(cd n)
 	{
-		mrtx result;
-		result=zeros(this->rows(),this->cols());
 		for(int i=0;i<this->rows();i++)
 		{
 			for(int j=0;j<this->cols();j++)
 			{
-				result.matrix[i][j]=(this->matrix[i][j])*n;
+				this->matrix[i][j]*=n;
 			}
 		}
-		return result;
+		return this;
 	}
 
 
 
-	//identity matrix
-	static mrtx I(int n)
-	{
-		mrtx result=zeros(n,n);
-		for(int i=0;i<n;i++)
-			result.matrix[i][i]=cd(1.0);
-		return result;
-	}
+
 
 
 

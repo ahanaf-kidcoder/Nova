@@ -24,5 +24,20 @@ int main() {
     std::cout << "A ⊗ B:\n";
     T.show();
 
+
+    //scaler multiplication
+    mrtx scl;
+    scl=A.scale(3);
+    scl.show();
+
+    //identity matrix
+    mrtx i;
+    i=mrtx::I(5);
+    i.show();
+
+    //zeros
+    mrtx z;
+    z=mrtx::zeros(3,4);
+    z.show();
     return 0;
 }
