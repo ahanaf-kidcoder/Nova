@@ -1,6 +1,5 @@
 #include <iostream>
-#include "mrtx.hpp"
-
+#include "include/mrtx.hpp"
 int main() {
     // Create matrices
     mrtx A;
